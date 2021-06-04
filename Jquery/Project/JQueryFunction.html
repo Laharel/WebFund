@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .outer-div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid black;
+        }
+        .inner-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button{
+            width: 100px;
+            height: 30px;
+        }
+        .new-class{
+            color: darkblue;
+        }
+    </style>
+   <script>
+        $(document).ready(function(){
+            // var isClicked = false;
+
+            $('.obj-5').hide('.obj-5');
+            $('.obj-9').fadeOut('.obj-9');
+            $('.obj-12').hide('.obj-12');
+            $('.btn-4').click(function(){
+                $('.obj-4').hide('.obj-4');
+                // alert($('.btn').text());
+                // $("btn-4").click{isClicked = !isClicked;}
+                // isClicked ? $('btn-4').val("Show") : $('btn-4').val("Hide");
+                // $("btn-4").val($("btn-4").val() === "Hide" ? "Show": "Hide")
+                if($('.btn-4').text() == "Hide"){
+                    $('.obj-4').hide();
+                }                
+                else{
+                    $('.btn-4').html("Hide");
+                    $('.obj-4').show();
+                }
+            });
+
+            $('.btn-5').click(function(){
+                $('.obj-5').show('.obj-5');
+                // $('.btn-4').html("Hide");
+            })
+
+            $('.btn-1').click(function(){
+                $('.obj-1').addClass("new-class");
+            })
+
+            $('.btn-2').click(function(){
+                $('.obj-2').slideToggle();
+            })
+
+            $('.btn-3').click(function(){
+                $('.obj-3').append("Hello");
+            })
+
+            $('.btn-6').click(function(){
+                $('.obj-6').toggle();
+            })
+            $('.btn-7').click(function(){
+                $('.obj-7').after("Hello");
+            })
+            $('.btn-8').click(function(){
+                $('.obj-8').before("Hello");
+            })
+            $('.btn-9').click(function(){
+                $('.obj-9').fadeIn();
+            })
+            $('.btn-10').click(function(){
+                $('.obj-10').fadeOut();
+            })
+            $('.btn-11').click(function(){
+                $('.obj-11').slideUp()
+            })
+            $('.btn-12').click(function(){
+                $('.obj-12').slideDown()
+            })
+            $('.btn-13').click(function(){
+                var html_text = $('.obj-13').html();
+                $('.obj-13').after(html_text);
+            })
+            $('.btn-14').click(function(){
+                var attribute = $('#attr-h1').attr("day")
+                $('#attr-h1').append(attribute);
+            })
+            $('.btn-15').click(function(){
+                var btnVal = $('.btn-15').val();
+                $('#val-h1').after(btnVal);
+            })
+            $('.btn-16').click(function(){
+                var btnText = $('.btn-16').text();
+                $('#text-h1').after(btnText);
+            })
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="outer-div">
+        <button class="btn-4" value="hide">Hide</button>
+        <h2 class="obj-4">Hello World!</h2>
+    </div>
+        
+    <div class="outer-div">
+        <button class="btn-5">Show</button>
+        <h2 class="obj-5">Hello World!</h2>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-1">AddClass</button>
+        <div class="inner-div">
+            <h1>AddClass</h1>
+            <p class="obj-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-2">SlideToggle</button>
+        <div class="inner-div">
+            <h1>SlideToggle</h1>
+            <p class="obj-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-3">Append</button>
+        <div class="inner-div">
+            <h1>Append</h1>
+            <p class="obj-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+    <div class="outer-div">
+        <button class="btn-6">Toggle</button>
+        <div class="inner-div">
+            <h1>Toggle</h1>
+            <p class="obj-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+    <div class="outer-div">
+        <button class="btn-7">after</button>
+        <div class="inner-div">
+            <h1>after</h1>
+            <p class="obj-7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+    <div class="outer-div">
+        <button class="btn-8">before</button>
+        <div class="inner-div">
+            <h1>before</h1>
+            <p class="obj-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-9">FadeIn</button>
+        <div class="inner-div">
+            <h1>FadeIn</h1>
+            <p class="obj-9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-10">FadeOut</button>
+        <div class="inner-div">
+            <h1>FadeOut</h1>
+            <p class="obj-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+    <div class="outer-div">
+        <button class="btn-11">Slideup</button>
+        <div class="inner-div">
+            <h1>Slideup</h1>
+            <p class="obj-11">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+    <div class="outer-div">
+        <button class="btn-12">Slidedown</button>
+        <div class="inner-div">
+            <h1>Slidedown</h1>
+            <p class="obj-12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-13">HTML</button>
+        <div class="inner-div">
+            <h1>HTML</h1>
+            <p class="obj-13">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-14">Attr</button>
+        <div class="inner-div">
+            <h1 id= "attr-h1" day="Tuesday">This h1 has attribute "Day":</h1>
+            <p class="obj-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-15" value="Star">Star</button>
+        <div class="inner-div">
+            <h1 id= "val-h1" >the button has value:</h1>
+            <p class="obj-15">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+    <div class="outer-div">
+        <button class="btn-16" value="Star">Text</button>
+        <div class="inner-div">
+            <h1 id= "text-h1" >button has text: </h1>
+            <p class="obj-16">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, exercitationem?</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

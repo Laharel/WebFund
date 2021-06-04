@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+
+        $(document).ready(function(){
+
+            $('img').hover(function(){
+                var altSrc = $(this).attr('alt-src');
+                var src = $(this).attr('src');
+                $(this).attr('alt-src', src);
+                $(this).attr('src', altSrc);
+            }, function(){
+                var original_src = $(this).attr('alt-src');
+                var alt_src = $(this).attr('src')
+                $(this).attr('src', original_src);
+                $(this).attr('alt-src', alt_src);
+
+            })
+        })
+    </script>
+    <title>Hover In and Out</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        .container{
+            max-width: 900px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="programmer-1" src="programmer.jpg" alt-src="frog.jpg">
+        <img class="programmer-2" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+        <img class="programmer-3" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+        <img class="programmer-4" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+        <img class="programmer-5" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+        <img class="programmer-6" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+        <img class="programmer-7" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+        <img class="programmer-8" src="programmer.jpg" alt-src="frog.jpg" alt="programmer not found">
+
+    </div>
+    <button>Restore</button>
+
+</body>
+</html>

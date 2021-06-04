@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- <script src="js/test.js" type="text/javascript"></script> -->
+   <script>
+       $(document).ready(function(){
+        $('button').click(function(){
+            $('img').show();
+        })
+
+    $('.frog-1').click(function(){
+        $('.frog-1').hide('.frog-1');
+    })
+    $('.frog-2').click(function(){
+        $('.frog-2').hide('.frog-2');
+    })
+    $('.frog-3').click(function(){
+        $('.frog-3').hide('.frog-3');
+    })
+    $('.frog-4').click(function(){
+        $('.frog-4').hide('.frog-4');
+    })
+    $('.frog-5').click(function(){
+        $('.frog-5').hide('.frog-5');
+    })
+    $('.frog-6').click(function(){
+        $('.frog-6').hide('.frog-6');
+    })
+    $('.frog-7').click(function(){
+        $('.frog-7').hide('.frog-7');
+    })
+    $('.frog-8').click(function(){
+        $('.frog-8').hide('.frog-8');
+    })
+})
+
+   </script>
+    <title>Disappearing Frog</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img class="frog-1" src="frog.jpg" alt="frog not found">
+        <img class="frog-2" src="frog.jpg" alt="frog not found">
+        <img class="frog-3" src="frog.jpg" alt="frog not found">
+        <img class="frog-4" src="frog.jpg" alt="frog not found">
+        <img class="frog-5" src="frog.jpg" alt="frog not found">
+        <img class="frog-6" src="frog.jpg" alt="frog not found">
+        <img class="frog-7" src="frog.jpg" alt="frog not found">
+        <img class="frog-8" src="frog.jpg" alt="frog not found">
+
+    </div>
+    <button>Restore</button>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.center-box{
+    background-color: rgb(11, 11, 97);
+    width: auto;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.center-item{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: cornsilk;
+    width: 100px;
+    height: 100px;
+}
